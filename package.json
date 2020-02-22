@@ -1,0 +1,33 @@
+{
+  "name": "apprun-d3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack -p --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yysun/apprun-d3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yysun/apprun-d3/issues"
+  },
+  "homepage": "https://github.com/yysun/apprun-d3#readme",
+  "devDependencies": {
+    "@types/d3": "^5.7.2",
+    "@types/topojson": "^3.2.2",
+    "apprun": "^2.22.2",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

@@ -1,0 +1,25 @@
+body {
+  background: #fcfcfa;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.stroke {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3px;
+}
+
+.fill {
+  fill: #fff;
+}
+
+.graticule {
+  fill: none;
+  stroke: rgb(48, 61, 49);
+  stroke-width: .5px;
+  stroke-opacity: .5;
+}
+
+.land {
+  fill: rgb(90, 114, 91);
+}
