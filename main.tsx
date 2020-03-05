@@ -4,6 +4,7 @@ import * as topojson from 'topojson';
 
 const width = 960;
 const height = 500;
+
 const map = ({ datum }) => {
   if (!datum) return;
   const projection = d3.geoEqualEarth();
@@ -45,19 +46,10 @@ const map = ({ datum }) => {
     .attr('d', path);
 };
 
-const state = {};
+const state = d3.json('world-110m.json').then(world => ({
+  datum: topojson.feature(world, world.objects.land)
+}));
 
-const view = state => (
-  <div>
-    <svg id="svg" ref={() => map(state)}></svg>
-  </div>
-);
+const view = state => <svg id="svg" ref={() => map(state)}></svg>;
 
-const update = {
-  '#': async () => {
-    const world = await d3.json('world-110m.json');
-    return { datum: topojson.feature(world, world.objects.land) };
-  }
-};
-
-app.start(document.body, state, view, update);
+app.start(document.body, state, view);
